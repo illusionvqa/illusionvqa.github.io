@@ -34,6 +34,10 @@ body {
 	vertical-align: middle;
 }
 
+.adjusted-subtitle {
+  font-size: 1.9rem;
+}
+
 .publication-banner {
 	max-height: parent;
 }
@@ -112,35 +116,22 @@ body {
 
 #experiments-section .results-carousel img {
 	margin: 0;
-  max-width: 65%;
+	max-width: 92%;
 }
 
 #examples-section .results-carousel img {
 	margin: 0;
-  max-width: 90%;
+	max-width: 90%;
 }
 
-.interpolation-panel {
-	background: #f5f5f5;
-	border-radius: 10px;
-}
-
-.interpolation-panel .interpolation-image {
-	width: 100%;
-	border-radius: 5px;
-}
-
-.interpolation-panel .slider {
-	margin: 0 !important;
-}
-
-.interpolation-panel .slider {
-	margin: 0 !important;
-}
-
-#interpolation-image-wrapper {
+table {
 	width: 100%;
 }
-#interpolation-image-wrapper img {
-	border-radius: 5px;
+
+thead td:hover {
+	text-decoration: underline;
+}
+
+.best-score-text {
+	color: #c6011f;
 }

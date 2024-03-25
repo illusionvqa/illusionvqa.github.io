@@ -54,6 +54,7 @@
 		<script src="./static/js/bulma-carousel.min.js"></script>
 		<script src="./static/js/bulma-slider.min.js"></script>
 		<script src="./static/js/index.js"></script>
+		<script src="./static/js/sort-table.js"></script>
 	</head>
 
 	<body>
@@ -70,7 +71,7 @@
 								/>
 								IllusionVQA
 							</h1>
-							<h2 class="subtitle is-3">
+							<h2 class="subtitle adjusted-subtitle">
 								A Challenging Optical Illusion Dataset for Vision Language
 								Models
 							</h2>
@@ -219,8 +220,13 @@
 							</p>
 							<p>
 								To this end, we present
-								<span class="dnerf"><b>IllusionVQA</b></span
-								>: a diverse dataset of challenging optical illusions and
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA</b></span>
+								: a diverse dataset of challenging optical illusions and
 								hard-to-interpret scenes to test the capability of
 								<b>VLMs</b> in two distinct multiple-choice
 								<b>Visual Question Answering</b> tasks - comprehension and soft
@@ -248,30 +254,396 @@
 			</div>
 		</section>
 
-		<!-- Overview -->
-		<section id="experiments-section" class="hero is-light is-small">
-			<div class="hero-body">
-				<div class="container has-text-centered">
-					<h3 class="title is-3">
-						<span class="dnerf">IllusionVQA</span> Dataset Overview
-					</h3>
+		<!-- Leaderboard -->
+		<section class="section">
+			<div class="container">
+				<div class="columns is-centered">
+					<h2 class="title is-3">Leaderboard</h2>
 				</div>
 
-				<div class="container has-text-centered">
-					<div class="py-5">
-						<img src="./static/images/types-of-illusions.png" />
-						<h6 class="subtitle is-6">
-							Types of illusions in the
-							<span class="dnerf">IllusionVQA</span>-Comprehension Test Split
-						</h6>
-					</div>
+				<div class="columns is-centered py-5">
+					<table
+						class="js-sort-table table is-bordered is-striped is-hoverable"
+						id="results"
+					>
+						<thead class="has-background-grey-light">
+							<tr>
+								<td class="js-sort-number" data-js-sort-colnum="0">
+									<strong>#</strong>
+								</td>
+								<td class="js-sort" data-js-sort-colnum="1">
+									<strong>Model</strong>
+								</td>
+								<td class="js-sort" data-js-sort-colnum="2">
+									<strong>Source</strong>
+								</td>
+								<td class="js-sort" data-js-sort-colnum="3">
+									<strong>Date</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="5">
+									<strong><u>ALL</u></strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="6">
+									<strong>Impossible Object</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="7">
+									<strong>Real-Scene</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="8">
+									<strong>Size</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="9">
+									<strong>Hidden</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="10">
+									<strong>Deceptive Design</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="11">
+									<strong>Angle Illusion</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="12">
+									<strong>Color</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="13">
+									<strong>Edited-Scene</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="14">
+									<strong>Upside-Down</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="15">
+									<strong>Pos.-Neg. Space</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="16">
+									<strong>Circle-Spiral</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="17">
+									<strong>Miscellaneous</strong>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>-</td>
+								<td><b>Human Performance*</b></td>
+								<td>
+									<a
+										href="https://arxiv.org/abs/2310.02255"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>91.03</b></td>
+								<td>98.51</td>
+								<td>98.44</td>
+								<td>63.04</td>
+								<td>100</td>
+								<td>94.59</td>
+								<td>84.62</td>
+								<td>60.87</td>
+								<td>100</td>
+								<td>100</td>
+								<td>100</td>
+								<td>66.67</td>
+								<td>89.47</td>
+							</tr>
 
-					<div class="py-5">
-						<img src="./static/images/question-types.png" />
-						<h6 class="subtitle is-6">
-							Question types in the
-							<span class="dnerf">IllusionVQA</span>-Comprehension Test Split
-						</h6>
+							<tr>
+								<td>1</td>
+								<td class="best-score-text"><b>GPT4V (4-shot)</b></td>
+								<td>
+									<a
+										href="https://arxiv.org/abs/2310.02255"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td class="best-score-text"><b>62.99</b></td>
+								<td>58.96</td>
+								<td>54.69</td>
+								<td>69.57</td>
+								<td>46.67</td>
+								<td>72.97</td>
+								<td>84.62</td>
+								<td>82.61</td>
+								<td>80.95</td>
+								<td>71.43</td>
+								<td>85.71</td>
+								<td>33.33</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td class="best-score-text"><b>Gemini (4-shot)</b></td>
+								<td>
+									<a
+										href="https://arxiv.org/abs/2310.02255"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td class="best-score-text"><b>52.87</b></td>
+								<td>56.72</td>
+								<td>46.88</td>
+								<td>52.17</td>
+								<td>48.89</td>
+								<td>67.56</td>
+								<td>50</td>
+								<td>17.39</td>
+								<td>66.67</td>
+								<td>57.14</td>
+								<td>71.43</td>
+								<td>33.33</td>
+								<td>57.89</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td class="best-score-text"><b>GPT4V (0-shot)</b></td>
+								<td>
+									<a
+										href="https://arxiv.org/abs/2310.02255"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td class="best-score-text"><b>58.85</b></td>
+								<td>55.22</td>
+								<td>57.81</td>
+								<td>58.70</td>
+								<td>51.11</td>
+								<td>70.27</td>
+								<td>69.23</td>
+								<td>69.57</td>
+								<td>71.43</td>
+								<td>71.43</td>
+								<td>57.14</td>
+								<td>50</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td><b>Gemini (0-shot)</b></td>
+								<td>
+									<a
+										href="https://arxiv.org/abs/2310.02255"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>51.26</b></td>
+								<td>56.72</td>
+								<td>46.88</td>
+								<td>45.65</td>
+								<td>42.22</td>
+								<td>64.86</td>
+								<td>53.85</td>
+								<td>17.39</td>
+								<td>66.67</td>
+								<td>57.14</td>
+								<td>85.71</td>
+								<td>33.33</td>
+								<td>52.63</td>
+							</tr>
+
+							<tr>
+								<td>5</td>
+								<td><b>Cog (0-shot)</b></td>
+								<td>
+									<a
+										href="https://arxiv.org/abs/2310.02255"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>38.16</b></td>
+								<td>44.03</td>
+								<td>34.38</td>
+								<td>13.04</td>
+								<td>42.22</td>
+								<td>45.95</td>
+								<td>30.77</td>
+								<td>30.43</td>
+								<td>42.86</td>
+								<td>71.43</td>
+								<td>71.43</td>
+								<td>16.67</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>6</td>
+								<td><b>LLaVa (0-shot)</b></td>
+								<td>
+									<a
+										href="https://arxiv.org/abs/2310.02255"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>40</b></td>
+								<td>43.28</td>
+								<td>42.19</td>
+								<td>19.57</td>
+								<td>42.22</td>
+								<td>43.24</td>
+								<td>38.46</td>
+								<td>26.09</td>
+								<td>61.90</td>
+								<td>71.43</td>
+								<td>42.86</td>
+								<td>0.00</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>7</td>
+								<td><b>I-BLIP (0-shot)</b></td>
+								<td>
+									<a
+										href="https://arxiv.org/abs/2310.02255"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>34.25</b></td>
+								<td>34.22</td>
+								<td>26.56</td>
+								<td>26.09</td>
+								<td>44.44</td>
+								<td>37.84</td>
+								<td>30.77</td>
+								<td>30.43</td>
+								<td>42.86</td>
+								<td>42.86</td>
+								<td>57.41</td>
+								<td>33.33</td>
+								<td>36.84</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="container has-text-centered pb-5">
+					<p>
+						The columns represent the different types of illusions in the
+						dataset.
+					</p>
+				</div>
+
+				<div class="container has-text-centered p-1">
+					<p>
+						🚨 To submit your results to the leaderboard, please send to
+						<a href="mailto:sameen2080@gmail.com">this email</a> with your
+						result json files.
+					</p>
+				</div>
+				<div class="container has-text-centered p-1">
+					<p>
+						🚨 For more submission details, please refer to
+						<a href="https://github.com/csebuetnlp/IllusionVQA">this link</a>
+					</p>
+				</div>
+			</div>
+		</section>
+		<!--/ Leaderboard -->
+
+		<!-- Overview -->
+		<section id="experiments-section section">
+			<div class="hero is-light is-align-items-center is-max-desktop p-5">
+				<h2 class="title is-2">
+					<img
+						src="static/images/illusionvqa_v2.png"
+						class="title-logo"
+						alt="Logo"
+					/>
+					<span class="dnerf">IllusionVQA Dataset</span>
+				</h2>
+			</div>
+			<div class="hero-body container is-max-desktop">
+				<div class="columns is-centered has-text-centered">
+					<div class="column is-four-fifths">
+						<h3 class="title is-3">Overview</h3>
+
+						<p class="content has-text-justified">
+							<img
+								src="static/images/illusionvqa_v2.png"
+								style="width: 1em; vertical-align: middle"
+								alt="Logo"
+							/>
+							<span class="dnerf"><b>IllusionVQA</b></span> is a Visual Question
+							Answering (VQA) dataset with <b>two sub-tasks</b>. The first task
+							tests <b>comprehension on 435 instances</b> in 12 optical illusion
+							categories. Each instance consists of an image with an optical
+							illusion, a question, and 3 to 6 options, one of which is the
+							correct answer. We refer to this task as
+							<img
+								src="static/images/illusionvqa_v2.png"
+								style="width: 1em; vertical-align: middle"
+								alt="Logo"
+							/>
+							<span class="dnerf"><b>IllusionVQA-Comprehension</b></span
+							>. The second task tests how well VLMs can differentiate
+							geometrically impossible objects from ordinary objects when two
+							objects are presented side by side. The task consists of
+							<b>1000 instances</b> following a similar format to the first
+							task. We refer to this task as
+							<img
+								src="static/images/illusionvqa_v2.png"
+								style="width: 1em; vertical-align: middle"
+								alt="Logo"
+							/>
+							<span class="dnerf"><b>IllusionVQA-Soft-Localization</b></span>
+							.
+						</p>
+					</div>
+				</div>
+				<div class="container has-text-centered mt-5">
+					<div
+						id="results-carousel"
+						class="carousel results-carousel has-text-centered is-vcentered"
+					>
+						<div class="py-5 item-1">
+							<img src="./static/images/types-of-illusions.png" />
+							<h6 class="subtitle is-6">
+								Types of illusions in the
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
+							</h6>
+						</div>
+
+						<div class="py-5 item-2">
+							<img src="./static/images/question-types.png" />
+							<h6 class="subtitle is-6">
+								Question types in the
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
+							</h6>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -292,8 +664,13 @@
 						<div class="content has-text-centered box">
 							<h4 class="title is-4">Illusion Examples</h4>
 							<p>
-								One examples for each type of illusion in the comprehension
-								task.
+								One examples for each <b>type of illusion</b> in
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
 							</p>
 
 							<div
@@ -302,74 +679,82 @@
 							>
 								<div class="item-1">
 									<img src="./static/images/impossible-obj.png" />
-									<h6 class="subtitle is-6">Impossible Object</h6>
+									<h6 class="subtitle is-6 m-5">Impossible Object</h6>
 								</div>
 								<div class="item-2">
 									<img src="./static/images/real-scene.png" />
-									<h6 class="subtitle is-6">Real Scene</h6>
+									<h6 class="subtitle is-6 m-5">Real Scene</h6>
 								</div>
 								<div class="item-3">
 									<img src="./static/images/size-illusion.png" />
-									<h6 class="subtitle is-6">Size Illusion</h6>
+									<h6 class="subtitle is-6 m-5">Size Illusion</h6>
 								</div>
 								<div class="item-4">
 									<img src="./static/images/hidden-illusion.png" />
-									<h6 class="subtitle is-6">Hidden Illusion</h6>
+									<h6 class="subtitle is-6 m-5">Hidden Illusion</h6>
 								</div>
 								<div class="item-5">
 									<img src="./static/images/deceptive-design.png" />
-									<h6 class="subtitle is-6">Deceptive Design</h6>
+									<h6 class="subtitle is-6 m-5">Deceptive Design</h6>
 								</div>
 								<div class="item-6">
 									<img src="./static/images/angle-illusion.png" />
-									<h6 class="subtitle is-6">Angle Illusion</h6>
+									<h6 class="subtitle is-6 m-5">Angle Illusion</h6>
 								</div>
 								<div class="item-7">
 									<img src="./static/images/color-illusion.png" />
-									<h6 class="subtitle is-6">Color Illusion</h6>
+									<h6 class="subtitle is-6 m-5">Color Illusion</h6>
 								</div>
 								<div class="item-8">
 									<img src="./static/images/edited-scene.png" />
-									<h6 class="subtitle is-6">Edited Scene</h6>
+									<h6 class="subtitle is-6 m-5">Edited Scene</h6>
 								</div>
 								<div class="item-9">
 									<img src="./static/images/upside-down.png" />
-									<h6 class="subtitle is-6">Upside-Down</h6>
+									<h6 class="subtitle is-6 m-5">Upside-Down</h6>
 								</div>
 								<div class="item-10">
 									<img src="./static/images/positive-negative.png" />
-									<h6 class="subtitle is-6">Positive-Negative</h6>
+									<h6 class="subtitle is-6 m-5">Positive-Negative</h6>
 								</div>
 								<div class="item-11">
 									<img src="./static/images/circle-spiral.png" />
-									<h6 class="subtitle is-6">Circle-Spiral</h6>
+									<h6 class="subtitle is-6 m-5">Circle-Spiral</h6>
 								</div>
 								<div class="item-12">
 									<img src="./static/images/miscellaneous.png" />
-									<h6 class="subtitle is-6">Miscellaneous</h6>
+									<h6 class="subtitle is-6 m-5">Miscellaneous</h6>
 								</div>
 							</div>
 						</div>
 
 						<div class="content has-text-centered box">
 							<h4 class="title is-4">Comprehension Task</h4>
-							<p>Samples questions from the comprehension task.</p>
+							<p>
+								Samples questions from
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
+							</p>
 
 							<div
 								id="results-carousel"
-								class="carousel results-carousel has-text-centered box"
+								class="carousel results-carousel has-text-centered"
 							>
 								<div class="item-1">
 									<img src="./static/images/shepherd-elephant.png" />
-									<h6 class="subtitle is-6">Shepard Elephant</h6>
+									<h6 class="subtitle is-6 m-5">Shepard Elephant</h6>
 								</div>
 								<div class="item-2">
 									<img src="./static/images/watercolor-illusion.png" />
-									<h6 class="subtitle is-6">Watercolor Illusion</h6>
+									<h6 class="subtitle is-6 m-5">Watercolor Illusion</h6>
 								</div>
 								<div class="item-3">
 									<img src="./static/images/trompe-art.png" />
-									<h6 class="subtitle is-6">
+									<h6 class="subtitle is-6 m-5">
 										A trompe l'oeil art, not traditionally considered as an
 										optical illusion in the cognitive sciences
 									</h6>
@@ -379,7 +764,18 @@
 
 						<div class="content has-text-centered box">
 							<h4 class="title is-4">Soft Localization Task</h4>
-							<img src="./static/images/localization.png" />
+							<p>
+								Samples questions from
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Soft-Localization</b></span>
+							</p>
+							<div class="has-text-centered">
+								<img src="./static/images/localization.png" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -388,34 +784,52 @@
 		<!--/ Examples -->
 
 		<!-- Result -->
-		<section id="experiments-section" class="hero is-light is-small">
-			<div class="hero-body">
-				<div class="container has-text-centered">
-					<h3 class="title is-3">Experiment Results</h3>
-				</div>
-				<div class="container">
-					<div
-						id="results-carousel"
-						class="carousel results-carousel has-text-centered"
-					>
-						<div class="item-1 py-6">
-							<img src="./static/images/comprehension-table.png" />
-							<h6 class="subtitle is-6">
-								Performance of VLMs on
-								<span class="dnerf">IllusionVQA</span> Comprehension task.
-								Categories where accuracy has improved using 4-shot prompting
-								are underlined. Human performance refers to the aggregated
-								performance based on the majority vote of three human
-								evaluators.
-							</h6>
-						</div>
-						<div class="item-2 py-6">
-							<img src="./static/images/localization-table.png" />
-							<h6 class="subtitle is-6">
-								Performance of VLMs on IllusionVQA Localization task. Human
-								performance denotes the majority vote performance on three human
-								evaluators on 200 randomly picked instances.
-							</h6>
+		<section id="experiments-section">
+			<div class="hero is-light is-align-items-center is-max-desktop p-5">
+				<h2 class="title is-2">
+					<span class="dnerf">Experiment Results</span>
+				</h2>
+			</div>
+
+			<div class="container is-max-desktop">
+				<div class="columns is-centered has-text-centered">
+					<div class="column is-four-fifths">
+						<div
+							id="results-carousel"
+							class="carousel results-carousel has-text-centered pt-6"
+						>
+							<div class="item-1">
+								<img src="./static/images/comprehension-table.png" />
+								<h6 class="subtitle is-6 m-5">
+									Performance of VLMs on
+									<img
+										src="static/images/illusionvqa_v2.png"
+										style="width: 1em; vertical-align: middle"
+										alt="Logo"
+									/>
+									<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
+									task. Categories where accuracy has improved using 4-shot
+									prompting are underlined. Human performance refers to the
+									aggregated performance based on the majority vote of three
+									human evaluators.
+								</h6>
+							</div>
+							<div class="item-2">
+								<img src="./static/images/localization-table.png" />
+								<h6 class="subtitle is-6 m-5">
+									Performance of VLMs on
+									<img
+										src="static/images/illusionvqa_v2.png"
+										style="width: 1em; vertical-align: middle"
+										alt="Logo"
+									/>
+									<span class="dnerf"
+										><b>IllusionVQA-Soft-Localization</b></span
+									>
+									task. Human performance denotes the majority vote performance
+									on three human evaluators on 200 randomly picked instances.
+								</h6>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -427,6 +841,22 @@
 			});
 		</script>
 		<!--/ Result -->
+
+		<!-- Visualization -->
+		<section id="visualizer-section">
+			<div class="hero is-light is-align-items-center is-max-desktop p-5">
+				<h2 class="title is-2">
+					<span class="dnerf">Data Visualization</span>
+				</h2>
+			</div>
+
+			<div class="container mt-5">
+				<div class="columns is-centered">
+					<p>Coming soon!</p>
+				</div>
+			</div>
+		</section>
+		<!--/ Visualization -->
 
 		<section class="section" id="BibTeX">
 			<div class="container is-max-desktop content">
