@@ -126,7 +126,7 @@
 									<!-- PDF Link. -->
 									<span class="link-block">
 										<a
-											href="https://arxiv.org/pdf/#"
+											href="https://arxiv.org/pdf/2403.15952.pdf"
 											class="external-link button is-normal is-rounded is-dark"
 										>
 											<span class="icon">
@@ -137,7 +137,7 @@
 									</span>
 									<span class="link-block">
 										<a
-											href="https://arxiv.org/abs/#"
+											href="https://arxiv.org/abs/2403.15952"
 											class="external-link button is-normal is-rounded is-dark"
 										>
 											<span class="icon">
@@ -159,14 +159,28 @@
 										</a>
 									</span>
 									<!-- Dataset Link. -->
-									<span class="link-block">
+									<span class="link-block dropdown">
 										<a
-											href="https://huggingface.co/datasets/csebuetnlp/illusionVQA-Comprehension"
+											href="https://huggingface.co/datasets/csebuetnlp"
 											class="external-link button is-normal is-rounded is-dark"
 										>
 											<span class="icon"> 🤗 </span>
 											<span>Data</span>
 										</a>
+										<div class="dropdown-content">
+											<a
+												href="https://huggingface.co/datasets/csebuetnlp/illusionVQA-Comprehension"
+												class="external-link is-rounded is-normal is-dark button"
+											>
+												🧠 Comprehension
+											</a>
+											<a
+												href="https://huggingface.co/datasets/csebuetnlp/illusionVQA-Soft-Localization"
+												class="external-link is-rounded is-normal is-dark button"
+											>
+												🔎 Soft Localization
+											</a>
+										</div>
 									</span>
 									<!-- Dataset Link. -->
 									<span class="link-block">
@@ -263,7 +277,7 @@
 
 				<div class="columns is-centered py-5">
 					<table
-						class="js-sort-table table is-bordered is-striped is-hoverable"
+						class="js-sort-table table is-bordered is-striped is-hoverable is-fullwidth"
 						id="results"
 					>
 						<thead class="has-background-grey-light">
@@ -327,7 +341,7 @@
 								<td><b>Human Performance*</b></td>
 								<td>
 									<a
-										href="#"
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_human_eval.ipynb"
 										class="ext-link"
 										style="font-size: 16px"
 										>Link</a
@@ -354,7 +368,7 @@
 								<td class="best-score-text"><b>GPT4V (4-shot)</b></td>
 								<td>
 									<a
-										href="#"
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
 										class="ext-link"
 										style="font-size: 16px"
 										>Link</a
@@ -378,37 +392,10 @@
 
 							<tr>
 								<td>2</td>
-								<td class="best-score-text"><b>Gemini (4-shot)</b></td>
-								<td>
-									<a
-										href="#"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td class="best-score-text"><b>52.87</b></td>
-								<td>56.72</td>
-								<td>46.88</td>
-								<td>52.17</td>
-								<td>48.89</td>
-								<td>67.56</td>
-								<td>50</td>
-								<td>17.39</td>
-								<td>66.67</td>
-								<td>57.14</td>
-								<td>71.43</td>
-								<td>33.33</td>
-								<td>57.89</td>
-							</tr>
-
-							<tr>
-								<td>3</td>
 								<td class="best-score-text"><b>GPT4V (0-shot)</b></td>
 								<td>
 									<a
-										href="#"
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
 										class="ext-link"
 										style="font-size: 16px"
 										>Link</a
@@ -431,11 +418,38 @@
 							</tr>
 
 							<tr>
+								<td>3</td>
+								<td class="best-score-text"><b>Gemini (4-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td class="best-score-text"><b>52.87</b></td>
+								<td>56.72</td>
+								<td>46.88</td>
+								<td>52.17</td>
+								<td>48.89</td>
+								<td>67.56</td>
+								<td>50</td>
+								<td>17.39</td>
+								<td>66.67</td>
+								<td>57.14</td>
+								<td>71.43</td>
+								<td>33.33</td>
+								<td>57.89</td>
+							</tr>
+
+							<tr>
 								<td>4</td>
 								<td><b>Gemini (0-shot)</b></td>
 								<td>
 									<a
-										href="#"
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
 										class="ext-link"
 										style="font-size: 16px"
 										>Link</a
@@ -459,37 +473,10 @@
 
 							<tr>
 								<td>5</td>
-								<td><b>Cog (0-shot)</b></td>
-								<td>
-									<a
-										href="#"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td><b>38.16</b></td>
-								<td>44.03</td>
-								<td>34.38</td>
-								<td>13.04</td>
-								<td>42.22</td>
-								<td>45.95</td>
-								<td>30.77</td>
-								<td>30.43</td>
-								<td>42.86</td>
-								<td>71.43</td>
-								<td>71.43</td>
-								<td>16.67</td>
-								<td>42.11</td>
-							</tr>
-
-							<tr>
-								<td>6</td>
 								<td><b>LLaVa (0-shot)</b></td>
 								<td>
 									<a
-										href="#"
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_llava_results.json"
 										class="ext-link"
 										style="font-size: 16px"
 										>Link</a
@@ -512,11 +499,38 @@
 							</tr>
 
 							<tr>
+								<td>6</td>
+								<td><b>Cog (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_cog_results.json"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>38.16</b></td>
+								<td>44.03</td>
+								<td>34.38</td>
+								<td>13.04</td>
+								<td>42.22</td>
+								<td>45.95</td>
+								<td>30.77</td>
+								<td>30.43</td>
+								<td>42.86</td>
+								<td>71.43</td>
+								<td>71.43</td>
+								<td>16.67</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
 								<td>7</td>
 								<td><b>I-BLIP (0-shot)</b></td>
 								<td>
 									<a
-										href="#"
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_instructblip_results.json"
 										class="ext-link"
 										style="font-size: 16px"
 										>Link</a
@@ -861,11 +875,13 @@
 		<section class="section" id="BibTeX">
 			<div class="container is-max-desktop content">
 				<h2 class="title">BibTeX</h2>
-				<pre><code>@article{illusionvqa,
-    title={IllusionVQA: A Challenging Optical Illusion Dataset for Vision Language Models},
-    author={Haz Sameen Shahgir, Khondker Salman Sayeed, Abhik Bhattacharjee, Wasi Uddin Ahmad, Yue Dong, Rifat Shahriyar},
-    url={https://arxiv.org/abs/identifier},
-    year={2024},
+				<pre><code>@misc{shahgir2024illusionvqa,
+      title={IllusionVQA: A Challenging Optical Illusion Dataset for Vision Language Models}, 
+      author={Haz Sameen Shahgir and Khondker Salman Sayeed and Abhik Bhattacharjee and Wasi Uddin Ahmad and Yue Dong and Rifat Shahriyar},
+      year={2024},
+      eprint={2403.15952},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }</code></pre>
 			</div>
 		</section>
@@ -884,7 +900,7 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="content has-text-centered">
-					<a class="icon-link" href="https://arxiv.org/pdf/#">
+					<a class="icon-link" href="https://arxiv.org/pdf/2403.15952.pdf">
 						<i class="fas fa-file-pdf"></i>
 					</a>
 					<a

@@ -35,7 +35,35 @@ body {
 }
 
 .adjusted-subtitle {
-  font-size: 1.9rem;
+	font-size: 1.9rem;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #363636;
+	z-index: 1;
+	padding: 0;
+	border-radius: 20px;
+}
+
+.dropdown-content a {
+	color: white;
+	background-color: #363636;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 
 .publication-banner {
@@ -126,6 +154,11 @@ body {
 
 table {
 	width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+	width: max-content;
 }
 
 thead td:hover {
