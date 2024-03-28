@@ -26,7 +26,8 @@ body {
 }
 
 .teaser-img {
-	width: 65%;
+  height: 400px;
+  width: auto;
 }
 
 .title-logo {
