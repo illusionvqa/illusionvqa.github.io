@@ -30,6 +30,10 @@ body {
   width: auto;
 }
 
+.comp-img {
+  margin-bottom: 20px;
+}
+
 .title-logo {
 	width: 1em;
 	vertical-align: middle;
