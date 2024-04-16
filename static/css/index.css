@@ -36,6 +36,10 @@ body {
   margin-bottom: 20px;
 }
 
+.leaderboard-header {
+  margin-bottom: 70px;
+}
+
 .title-logo {
 	width: 1em;
 	vertical-align: middle;
