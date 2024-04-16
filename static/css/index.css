@@ -26,11 +26,13 @@ body {
 }
 
 .teaser-img {
-  height: 400px;
+  height: 350px;
   width: auto;
 }
 
 .comp-img {
+  height: 50%;
+  width: auto;
   margin-bottom: 20px;
 }
 

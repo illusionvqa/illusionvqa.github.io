@@ -60,7 +60,7 @@
 	<body>
 		<section class="hero">
 			<div class="hero-body">
-				<div class="container is-max-desktop">
+				<div class="container is-fluid">
 					<div class="columns is-centered">
 						<div class="column has-text-centered">
 							<h1 class="title is-1 publication-title">
@@ -207,7 +207,7 @@
 		</section>
 
 		<section class="hero teaser">
-			<div class="container">
+			<div class="container is-fluid">
 				<div class="columns">
 					<div class="column">
 						<div class="hero-body has-text-centered">
@@ -255,7 +255,7 @@
 		</section>
 
 		<section class="section">
-			<div class="container is-max-desktop">
+			<div class="container is-fluid">
 				<!-- Abstract. -->
 				<div class="columns is-centered has-text-centered">
 					<div class="column is-four-fifths">
@@ -307,12 +307,12 @@
 		</section>
 
 		<section id="comparison-section" class="section">
-			<div class="is-max-desktop">
+			<div class="container is-fluid">
 				<div class="hero-body has-text-centered">
 					<img
 						src="static/images//comparison.png"
 						alt="Comparison"
-						class="teaser-img comp-img"
+						class="comp-img"
 					/>
 					<h2 class="subtitle">
 						<b>Comparison</b> of
@@ -332,14 +332,231 @@
 			</div>
 		</section>
 
+    <!-- Overview -->
+		<section id="experiments-section section">
+			<div class="hero is-light is-align-items-center is-fluid p-5">
+				<h2 class="title is-2">
+					<img
+						src="static/images/illusionvqa_v2.png"
+						class="title-logo"
+						alt="Logo"
+					/>
+					<span class="dnerf">IllusionVQA Dataset</span>
+				</h2>
+			</div>
+			<div class="hero-body container is-fluid">
+				<div class="columns is-centered has-text-centered">
+					<div class="column is-four-fifths">
+						<h3 class="title is-3">Overview</h3>
+
+						<p class="content has-text-justified">
+							<img
+								src="static/images/illusionvqa_v2.png"
+								style="width: 1em; vertical-align: middle"
+								alt="Logo"
+							/>
+							<span class="dnerf"><b>IllusionVQA</b></span> is a Visual Question
+							Answering (VQA) dataset with <b>two sub-tasks</b>. The first task
+							tests <b>comprehension on 435 instances</b> in 12 optical illusion
+							categories. Each instance consists of an image with an optical
+							illusion, a question, and 3 to 6 options, one of which is the
+							correct answer. We refer to this task as
+							<img
+								src="static/images/illusionvqa_v2.png"
+								style="width: 1em; vertical-align: middle"
+								alt="Logo"
+							/>
+							<span class="dnerf"><b>IllusionVQA-Comprehension</b></span
+							>. The second task tests how well VLMs can differentiate
+							geometrically impossible objects from ordinary objects when two
+							objects are presented side by side. The task consists of
+							<b>1000 instances</b> following a similar format to the first
+							task. We refer to this task as
+							<img
+								src="static/images/illusionvqa_v2.png"
+								style="width: 1em; vertical-align: middle"
+								alt="Logo"
+							/>
+							<span class="dnerf"><b>IllusionVQA-Soft-Localization</b></span>
+							.
+						</p>
+					</div>
+				</div>
+				<div class="container has-text-centered mt-5">
+					<div
+						id="results-carousel"
+						class="carousel results-carousel has-text-centered is-vcentered"
+					>
+						<div class="py-5 item-1">
+							<img src="./static/images/types-of-illusions.png" />
+							<h6 class="subtitle is-6">
+								Types of illusions in the
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
+							</h6>
+						</div>
+
+						<div class="py-5 item-2">
+							<img src="./static/images/question-types.png" />
+							<h6 class="subtitle is-6">
+								Question types in the
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
+							</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Examples -->
+		<section class="section">
+			<div class="container is-fluid">
+				<div
+					id="examples-section"
+					class="columns is-centered has-text-centered"
+				>
+					<div class="column is-full">
+						<h2 class="title is-3">Examples</h2>
+
+						<div class="content has-text-centered box">
+							<h4 class="title is-4">Illusion Examples</h4>
+							<p>
+								One examples for each <b>type of illusion</b> in
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
+							</p>
+
+							<div
+								id="results-carousel"
+								class="carousel results-carousel has-text-centered"
+							>
+								<div class="item-1">
+									<img src="./static/images/impossible-obj.png" />
+									<h6 class="subtitle is-6 m-5">Impossible Object</h6>
+								</div>
+								<div class="item-2">
+									<img src="./static/images/real-scene.png" />
+									<h6 class="subtitle is-6 m-5">Real Scene</h6>
+								</div>
+								<div class="item-3">
+									<img src="./static/images/size-illusion.png" />
+									<h6 class="subtitle is-6 m-5">Size Illusion</h6>
+								</div>
+								<div class="item-4">
+									<img src="./static/images/hidden-illusion.png" />
+									<h6 class="subtitle is-6 m-5">Hidden Illusion</h6>
+								</div>
+								<div class="item-5">
+									<img src="./static/images/deceptive-design.png" />
+									<h6 class="subtitle is-6 m-5">Deceptive Design</h6>
+								</div>
+								<div class="item-6">
+									<img src="./static/images/angle-illusion.png" />
+									<h6 class="subtitle is-6 m-5">Angle Illusion</h6>
+								</div>
+								<div class="item-7">
+									<img src="./static/images/color-illusion.png" />
+									<h6 class="subtitle is-6 m-5">Color Illusion</h6>
+								</div>
+								<div class="item-8">
+									<img src="./static/images/edited-scene.png" />
+									<h6 class="subtitle is-6 m-5">Edited Scene</h6>
+								</div>
+								<div class="item-9">
+									<img src="./static/images/upside-down.png" />
+									<h6 class="subtitle is-6 m-5">Upside-Down</h6>
+								</div>
+								<div class="item-10">
+									<img src="./static/images/positive-negative.png" />
+									<h6 class="subtitle is-6 m-5">Positive-Negative</h6>
+								</div>
+								<div class="item-11">
+									<img src="./static/images/circle-spiral.png" />
+									<h6 class="subtitle is-6 m-5">Circle-Spiral</h6>
+								</div>
+								<div class="item-12">
+									<img src="./static/images/miscellaneous.png" />
+									<h6 class="subtitle is-6 m-5">Miscellaneous</h6>
+								</div>
+							</div>
+						</div>
+
+						<div class="content has-text-centered box">
+							<h4 class="title is-4">Comprehension Task</h4>
+							<p>
+								Samples questions from
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
+							</p>
+
+							<div
+								id="results-carousel"
+								class="carousel results-carousel has-text-centered"
+							>
+								<div class="item-1">
+									<img src="./static/images/shepherd-elephant.png" />
+									<h6 class="subtitle is-6 m-5">Shepard Elephant</h6>
+								</div>
+								<div class="item-2">
+									<img src="./static/images/watercolor-illusion.png" />
+									<h6 class="subtitle is-6 m-5">Watercolor Illusion</h6>
+								</div>
+								<div class="item-3">
+									<img src="./static/images/trompe-art.png" />
+									<h6 class="subtitle is-6 m-5">
+										A trompe l'oeil art, not traditionally considered as an
+										optical illusion in the cognitive sciences
+									</h6>
+								</div>
+							</div>
+						</div>
+
+						<div class="content has-text-centered box">
+							<h4 class="title is-4">Soft Localization Task</h4>
+							<p>
+								Samples questions from
+								<img
+									src="static/images/illusionvqa_v2.png"
+									style="width: 1em; vertical-align: middle"
+									alt="Logo"
+								/>
+								<span class="dnerf"><b>IllusionVQA-Soft-Localization</b></span>
+							</p>
+							<div class="has-text-centered">
+								<img src="./static/images/localization.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ Examples -->
+
 		<!-- Leaderboard -->
 		<section id="leaderboard" class="section">
-			<div class="container">
+			<div class="container is-fluid">
 				<div class="columns is-centered">
 					<h2 class="title is-3">Leaderboard</h2>
 				</div>
 
-				<div class="columns is-centered py-5">
+				<div class="columns table-container">
 					<table
 						class="js-sort-table table is-bordered is-striped is-hoverable is-fullwidth"
 						id="results"
@@ -642,234 +859,15 @@
 		</section>
 		<!--/ Leaderboard -->
 
-		<!-- Overview -->
-		<section id="experiments-section section">
-			<div class="hero is-light is-align-items-center is-max-desktop p-5">
-				<h2 class="title is-2">
-					<img
-						src="static/images/illusionvqa_v2.png"
-						class="title-logo"
-						alt="Logo"
-					/>
-					<span class="dnerf">IllusionVQA Dataset</span>
-				</h2>
-			</div>
-			<div class="hero-body container is-max-desktop">
-				<div class="columns is-centered has-text-centered">
-					<div class="column is-four-fifths">
-						<h3 class="title is-3">Overview</h3>
-
-						<p class="content has-text-justified">
-							<img
-								src="static/images/illusionvqa_v2.png"
-								style="width: 1em; vertical-align: middle"
-								alt="Logo"
-							/>
-							<span class="dnerf"><b>IllusionVQA</b></span> is a Visual Question
-							Answering (VQA) dataset with <b>two sub-tasks</b>. The first task
-							tests <b>comprehension on 435 instances</b> in 12 optical illusion
-							categories. Each instance consists of an image with an optical
-							illusion, a question, and 3 to 6 options, one of which is the
-							correct answer. We refer to this task as
-							<img
-								src="static/images/illusionvqa_v2.png"
-								style="width: 1em; vertical-align: middle"
-								alt="Logo"
-							/>
-							<span class="dnerf"><b>IllusionVQA-Comprehension</b></span
-							>. The second task tests how well VLMs can differentiate
-							geometrically impossible objects from ordinary objects when two
-							objects are presented side by side. The task consists of
-							<b>1000 instances</b> following a similar format to the first
-							task. We refer to this task as
-							<img
-								src="static/images/illusionvqa_v2.png"
-								style="width: 1em; vertical-align: middle"
-								alt="Logo"
-							/>
-							<span class="dnerf"><b>IllusionVQA-Soft-Localization</b></span>
-							.
-						</p>
-					</div>
-				</div>
-				<div class="container has-text-centered mt-5">
-					<div
-						id="results-carousel"
-						class="carousel results-carousel has-text-centered is-vcentered"
-					>
-						<div class="py-5 item-1">
-							<img src="./static/images/types-of-illusions.png" />
-							<h6 class="subtitle is-6">
-								Types of illusions in the
-								<img
-									src="static/images/illusionvqa_v2.png"
-									style="width: 1em; vertical-align: middle"
-									alt="Logo"
-								/>
-								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
-							</h6>
-						</div>
-
-						<div class="py-5 item-2">
-							<img src="./static/images/question-types.png" />
-							<h6 class="subtitle is-6">
-								Question types in the
-								<img
-									src="static/images/illusionvqa_v2.png"
-									style="width: 1em; vertical-align: middle"
-									alt="Logo"
-								/>
-								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
-							</h6>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--/ Overview -->
-
-		<!-- Examples -->
-		<section class="section">
-			<div class="container is-max-desktop">
-				<div
-					id="examples-section"
-					class="columns is-centered has-text-centered"
-				>
-					<div class="column is-full">
-						<h2 class="title is-3">Examples</h2>
-
-						<div class="content has-text-centered box">
-							<h4 class="title is-4">Illusion Examples</h4>
-							<p>
-								One examples for each <b>type of illusion</b> in
-								<img
-									src="static/images/illusionvqa_v2.png"
-									style="width: 1em; vertical-align: middle"
-									alt="Logo"
-								/>
-								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
-							</p>
-
-							<div
-								id="results-carousel"
-								class="carousel results-carousel has-text-centered"
-							>
-								<div class="item-1">
-									<img src="./static/images/impossible-obj.png" />
-									<h6 class="subtitle is-6 m-5">Impossible Object</h6>
-								</div>
-								<div class="item-2">
-									<img src="./static/images/real-scene.png" />
-									<h6 class="subtitle is-6 m-5">Real Scene</h6>
-								</div>
-								<div class="item-3">
-									<img src="./static/images/size-illusion.png" />
-									<h6 class="subtitle is-6 m-5">Size Illusion</h6>
-								</div>
-								<div class="item-4">
-									<img src="./static/images/hidden-illusion.png" />
-									<h6 class="subtitle is-6 m-5">Hidden Illusion</h6>
-								</div>
-								<div class="item-5">
-									<img src="./static/images/deceptive-design.png" />
-									<h6 class="subtitle is-6 m-5">Deceptive Design</h6>
-								</div>
-								<div class="item-6">
-									<img src="./static/images/angle-illusion.png" />
-									<h6 class="subtitle is-6 m-5">Angle Illusion</h6>
-								</div>
-								<div class="item-7">
-									<img src="./static/images/color-illusion.png" />
-									<h6 class="subtitle is-6 m-5">Color Illusion</h6>
-								</div>
-								<div class="item-8">
-									<img src="./static/images/edited-scene.png" />
-									<h6 class="subtitle is-6 m-5">Edited Scene</h6>
-								</div>
-								<div class="item-9">
-									<img src="./static/images/upside-down.png" />
-									<h6 class="subtitle is-6 m-5">Upside-Down</h6>
-								</div>
-								<div class="item-10">
-									<img src="./static/images/positive-negative.png" />
-									<h6 class="subtitle is-6 m-5">Positive-Negative</h6>
-								</div>
-								<div class="item-11">
-									<img src="./static/images/circle-spiral.png" />
-									<h6 class="subtitle is-6 m-5">Circle-Spiral</h6>
-								</div>
-								<div class="item-12">
-									<img src="./static/images/miscellaneous.png" />
-									<h6 class="subtitle is-6 m-5">Miscellaneous</h6>
-								</div>
-							</div>
-						</div>
-
-						<div class="content has-text-centered box">
-							<h4 class="title is-4">Comprehension Task</h4>
-							<p>
-								Samples questions from
-								<img
-									src="static/images/illusionvqa_v2.png"
-									style="width: 1em; vertical-align: middle"
-									alt="Logo"
-								/>
-								<span class="dnerf"><b>IllusionVQA-Comprehension</b></span>
-							</p>
-
-							<div
-								id="results-carousel"
-								class="carousel results-carousel has-text-centered"
-							>
-								<div class="item-1">
-									<img src="./static/images/shepherd-elephant.png" />
-									<h6 class="subtitle is-6 m-5">Shepard Elephant</h6>
-								</div>
-								<div class="item-2">
-									<img src="./static/images/watercolor-illusion.png" />
-									<h6 class="subtitle is-6 m-5">Watercolor Illusion</h6>
-								</div>
-								<div class="item-3">
-									<img src="./static/images/trompe-art.png" />
-									<h6 class="subtitle is-6 m-5">
-										A trompe l'oeil art, not traditionally considered as an
-										optical illusion in the cognitive sciences
-									</h6>
-								</div>
-							</div>
-						</div>
-
-						<div class="content has-text-centered box">
-							<h4 class="title is-4">Soft Localization Task</h4>
-							<p>
-								Samples questions from
-								<img
-									src="static/images/illusionvqa_v2.png"
-									style="width: 1em; vertical-align: middle"
-									alt="Logo"
-								/>
-								<span class="dnerf"><b>IllusionVQA-Soft-Localization</b></span>
-							</p>
-							<div class="has-text-centered">
-								<img src="./static/images/localization.png" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ Examples -->
-
 		<!-- Result -->
 		<section id="experiments-section">
-			<div class="hero is-light is-align-items-center is-max-desktop p-5">
+			<div class="hero is-light is-align-items-center is-fluid p-5">
 				<h2 class="title is-2">
 					<span class="dnerf">Experiment Results</span>
 				</h2>
 			</div>
 
-			<div class="container is-max-desktop">
+			<div class="container is-fluid">
 				<div class="columns is-centered has-text-centered">
 					<div class="column is-four-fifths">
 						<div
@@ -922,14 +920,14 @@
 
 		<!-- Visualization -->
 		<section id="visualizer-section">
-			<div class="hero is-light is-align-items-center is-max-desktop p-5">
+			<div class="hero is-light is-align-items-center is-fluid p-5">
 				<h2 class="title is-2">
 					<span class="dnerf">Data Visualization</span>
 				</h2>
 			</div>
 
 			<div class="container mt-5">
-				<div class="columns is-centered">
+				<div class="columns is-centered has-text-centered">
 					<p>Coming soon!</p>
 				</div>
 			</div>
@@ -937,7 +935,7 @@
 		<!--/ Visualization -->
 
 		<section class="section" id="BibTeX">
-			<div class="container is-max-desktop content">
+			<div class="container is-fluid content">
 				<h2 class="title">BibTeX</h2>
 				<pre><code>@misc{shahgir2024illusionvqa,
       title={IllusionVQA: A Challenging Optical Illusion Dataset for Vision Language Models}, 
