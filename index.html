@@ -306,7 +306,491 @@
 			</div>
 		</section>
 
+		<!-- Leaderboard -->
+		<section id="leaderboard" class="section">
+			<div
+				class="hero is-light is-align-items-center is-max-desktop p-5 leaderboard-header"
+			>
+				<h2 class="title is-2">
+					<span class="dnerf">Leaderboard</span>
+				</h2>
+			</div>
+
+			<div class="container is-fluid">
+				<div class="columns table-container">
+					<table
+						class="js-sort-table table is-bordered is-striped is-hoverable is-fullwidth"
+						id="results"
+					>
+						<thead class="has-background-grey-light">
+							<tr>
+								<td class="js-sort-number" data-js-sort-colnum="0">
+									<strong>#</strong>
+								</td>
+								<td class="js-sort" data-js-sort-colnum="1">
+									<strong>Model</strong>
+								</td>
+								<td class="js-sort" data-js-sort-colnum="2">
+									<strong>Source</strong>
+								</td>
+								<td class="js-sort" data-js-sort-colnum="3">
+									<strong>Date</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="5">
+									<strong><u>ALL</u></strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="6">
+									<strong>Impossible Object</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="7">
+									<strong>Real-Scene</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="8">
+									<strong>Size</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="9">
+									<strong>Hidden</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="10">
+									<strong>Deceptive Design</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="11">
+									<strong>Angle Illusion</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="12">
+									<strong>Color</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="13">
+									<strong>Edited-Scene</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="14">
+									<strong>Upside-Down</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="15">
+									<strong>Pos.-Neg. Space</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="16">
+									<strong>Circle-Spiral</strong>
+								</td>
+								<td class="js-sort-number" data-js-sort-colnum="17">
+									<strong>Miscellaneous</strong>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>-</td>
+								<td><b>Human Performance*</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_human_eval.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>91.03</b></td>
+								<td>98.51</td>
+								<td>98.44</td>
+								<td>63.04</td>
+								<td>100</td>
+								<td>94.59</td>
+								<td>84.62</td>
+								<td>60.87</td>
+								<td>100</td>
+								<td>100</td>
+								<td>100</td>
+								<td>66.67</td>
+								<td>89.47</td>
+							</tr>
+
+							<tr>
+								<td>1</td>
+								<td><b>GPT4o (4-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-07-28</td>
+								<td><b>67.12</b></td>
+								<td>61.94</td>
+								<td>57.81</td>
+								<td>93.47</td>
+								<td>48.89</td>
+								<td>78.38</td>
+								<td>80.77</td>
+								<td>78.26</td>
+								<td>85.71</td>
+								<td>42.86</td>
+								<td>71.43</td>
+								<td>50.00</td>
+								<td>52.63</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td><b>Claude 3.5 Sonnet (4-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/inference/closed_source_api/claude_inference.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-07-28</td>
+								<td><b>66.44</b></td>
+								<td>63.43</td>
+								<td>57.81</td>
+								<td>80.43</td>
+								<td>44.44</td>
+								<td>67.57</td>
+								<td>73.08</td>
+								<td>86.96</td>
+								<td>71.43</td>
+								<td>85.71</td>
+								<td>71.43</td>
+								<td>50.00</td>
+								<td>52.63</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td class="best-score-text"><b>GPT4V (4-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td class="best-score-text"><b>62.99</b></td>
+								<td>58.96</td>
+								<td>54.69</td>
+								<td>69.57</td>
+								<td>46.67</td>
+								<td>72.97</td>
+								<td>84.62</td>
+								<td>82.61</td>
+								<td>80.95</td>
+								<td>71.43</td>
+								<td>85.71</td>
+								<td>33.33</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td><b>GPT4o (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-07-28</td>
+								<td><b>62.53</b></td>
+								<td>63.43</td>
+								<td>64.06</td>
+								<td>45.65</td>
+								<td>66.67</td>
+								<td>72.97</td>
+								<td>50.00</td>
+								<td>52.17</td>
+								<td>80.95</td>
+								<td>71.42</td>
+								<td>85.71</td>
+								<td>50.00</td>
+								<td>52.63</td>
+							</tr>
+
+							<tr>
+								<td>5</td>
+								<td><b>Claude 3.5 Sonnet (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/inference/closed_source_api/claude_inference.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-07-28</td>
+								<td><b>59.08</b></td>
+								<td>64.93</td>
+								<td>54.69</td>
+								<td>50.00</td>
+								<td>37.78</td>
+								<td>70.27</td>
+								<td>73.08</td>
+								<td>65.22</td>
+								<td>61.90</td>
+								<td>85.71</td>
+								<td>71.43</td>
+								<td>33.33</td>
+								<td>47.37</td>
+							</tr>
+
+							<tr>
+								<td>6</td>
+								<td class="best-score-text"><b>GPT4V (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td class="best-score-text"><b>58.85</b></td>
+								<td>55.22</td>
+								<td>57.81</td>
+								<td>58.70</td>
+								<td>51.11</td>
+								<td>70.27</td>
+								<td>69.23</td>
+								<td>69.57</td>
+								<td>71.43</td>
+								<td>71.43</td>
+								<td>57.14</td>
+								<td>50</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>7</td>
+								<td class="best-score-text"><b>Gemini (4-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td class="best-score-text"><b>52.87</b></td>
+								<td>56.72</td>
+								<td>46.88</td>
+								<td>52.17</td>
+								<td>48.89</td>
+								<td>67.56</td>
+								<td>50</td>
+								<td>17.39</td>
+								<td>66.67</td>
+								<td>57.14</td>
+								<td>71.43</td>
+								<td>33.33</td>
+								<td>57.89</td>
+							</tr>
+
+							<tr>
+								<td>8</td>
+								<td><b>Gemini (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>51.26</b></td>
+								<td>56.72</td>
+								<td>46.88</td>
+								<td>45.65</td>
+								<td>42.22</td>
+								<td>64.86</td>
+								<td>53.85</td>
+								<td>17.39</td>
+								<td>66.67</td>
+								<td>57.14</td>
+								<td>85.71</td>
+								<td>33.33</td>
+								<td>52.63</td>
+							</tr>
+
+							<tr>
+								<td>9</td>
+								<td><b>InternVL2 (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/inference/open_source/internvlm_inference.py"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-07-28</td>
+								<td><b>45.06</b></td>
+								<td>49.25</td>
+								<td>40.63</td>
+								<td>43.48</td>
+								<td>44.44</td>
+								<td>37.84</td>
+								<td>50.00</td>
+								<td>26.09</td>
+								<td>66.67</td>
+								<td>85.71</td>
+								<td>42.86</td>
+								<td>0.00</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>10</td>
+								<td><b>LLaVa (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_llava_results.json"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>40</b></td>
+								<td>43.28</td>
+								<td>42.19</td>
+								<td>19.57</td>
+								<td>42.22</td>
+								<td>43.24</td>
+								<td>38.46</td>
+								<td>26.09</td>
+								<td>61.90</td>
+								<td>71.43</td>
+								<td>42.86</td>
+								<td>0.00</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>11</td>
+								<td><b>Cog (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_cog_results.json"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>38.16</b></td>
+								<td>44.03</td>
+								<td>34.38</td>
+								<td>13.04</td>
+								<td>42.22</td>
+								<td>45.95</td>
+								<td>30.77</td>
+								<td>30.43</td>
+								<td>42.86</td>
+								<td>71.43</td>
+								<td>71.43</td>
+								<td>16.67</td>
+								<td>42.11</td>
+							</tr>
+
+							<tr>
+								<td>12</td>
+								<td><b>I-BLIP (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_instructblip_results.json"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-02-25</td>
+								<td><b>34.25</b></td>
+								<td>34.22</td>
+								<td>26.56</td>
+								<td>26.09</td>
+								<td>44.44</td>
+								<td>37.84</td>
+								<td>30.77</td>
+								<td>30.43</td>
+								<td>42.86</td>
+								<td>42.86</td>
+								<td>57.41</td>
+								<td>33.33</td>
+								<td>36.84</td>
+							</tr>
+
+							<tr>
+								<td>13</td>
+								<td><b>Pali Gemma (0-shot)</b></td>
+								<td>
+									<a
+										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/inference/open_source/paligemma_inference.py"
+										class="ext-link"
+										style="font-size: 16px"
+										>Link</a
+									>
+								</td>
+								<td>2024-07-28</td>
+								<td><b>31.26</b></td>
+								<td>32.09</td>
+								<td>35.94</td>
+								<td>15.22</td>
+								<td>33.33</td>
+								<td>32.43</td>
+								<td>26.92</td>
+								<td>34.78</td>
+								<td>42.86</td>
+								<td>42.86</td>
+								<td>42.86</td>
+								<td>0.00</td>
+								<td>31.58</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="container has-text-centered pb-5">
+					<p>
+						The columns represent the different types of illusions in the
+						dataset.
+					</p>
+				</div>
+
+				<div class="container has-text-centered p-1">
+					<p>
+						🚨 To submit your results to the leaderboard, please send to
+						<a href="mailto:sameen2080@gmail.com">this email</a> with your
+						result json files.
+					</p>
+				</div>
+				<div class="container has-text-centered p-1">
+					<p>
+						🚨 For more submission details, please refer to
+						<a href="https://github.com/csebuetnlp/IllusionVQA">this link</a>
+					</p>
+				</div>
+			</div>
+		</section>
+		<!--/ Leaderboard -->
+
 		<section id="comparison-section" class="section">
+			<div
+				class="hero is-light is-align-items-center is-max-desktop p-5 leaderboard-header"
+			>
+				<h2 class="title is-2">
+					<span class="dnerf">Comparison with prior works</span>
+				</h2>
+			</div>
+
 			<div class="container is-max-desktop">
 				<div class="hero-body has-text-centered">
 					<img
@@ -548,320 +1032,6 @@
 			</div>
 		</section>
 		<!--/ Examples -->
-
-		<!-- Leaderboard -->
-		<section id="leaderboard" class="section">
-			<div
-				class="hero is-light is-align-items-center is-max-desktop p-5 leaderboard-header"
-			>
-				<h2 class="title is-2">
-					<span class="dnerf">Leaderboard</span>
-				</h2>
-			</div>
-
-			<div class="container is-fluid">
-				<div class="columns table-container">
-					<table
-						class="js-sort-table table is-bordered is-striped is-hoverable is-fullwidth"
-						id="results"
-					>
-						<thead class="has-background-grey-light">
-							<tr>
-								<td class="js-sort-number" data-js-sort-colnum="0">
-									<strong>#</strong>
-								</td>
-								<td class="js-sort" data-js-sort-colnum="1">
-									<strong>Model</strong>
-								</td>
-								<td class="js-sort" data-js-sort-colnum="2">
-									<strong>Source</strong>
-								</td>
-								<td class="js-sort" data-js-sort-colnum="3">
-									<strong>Date</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="5">
-									<strong><u>ALL</u></strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="6">
-									<strong>Impossible Object</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="7">
-									<strong>Real-Scene</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="8">
-									<strong>Size</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="9">
-									<strong>Hidden</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="10">
-									<strong>Deceptive Design</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="11">
-									<strong>Angle Illusion</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="12">
-									<strong>Color</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="13">
-									<strong>Edited-Scene</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="14">
-									<strong>Upside-Down</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="15">
-									<strong>Pos.-Neg. Space</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="16">
-									<strong>Circle-Spiral</strong>
-								</td>
-								<td class="js-sort-number" data-js-sort-colnum="17">
-									<strong>Miscellaneous</strong>
-								</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>-</td>
-								<td><b>Human Performance*</b></td>
-								<td>
-									<a
-										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_human_eval.ipynb"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td><b>91.03</b></td>
-								<td>98.51</td>
-								<td>98.44</td>
-								<td>63.04</td>
-								<td>100</td>
-								<td>94.59</td>
-								<td>84.62</td>
-								<td>60.87</td>
-								<td>100</td>
-								<td>100</td>
-								<td>100</td>
-								<td>66.67</td>
-								<td>89.47</td>
-							</tr>
-
-							<tr>
-								<td>1</td>
-								<td class="best-score-text"><b>GPT4V (4-shot)</b></td>
-								<td>
-									<a
-										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td class="best-score-text"><b>62.99</b></td>
-								<td>58.96</td>
-								<td>54.69</td>
-								<td>69.57</td>
-								<td>46.67</td>
-								<td>72.97</td>
-								<td>84.62</td>
-								<td>82.61</td>
-								<td>80.95</td>
-								<td>71.43</td>
-								<td>85.71</td>
-								<td>33.33</td>
-								<td>42.11</td>
-							</tr>
-
-							<tr>
-								<td>2</td>
-								<td class="best-score-text"><b>GPT4V (0-shot)</b></td>
-								<td>
-									<a
-										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td class="best-score-text"><b>58.85</b></td>
-								<td>55.22</td>
-								<td>57.81</td>
-								<td>58.70</td>
-								<td>51.11</td>
-								<td>70.27</td>
-								<td>69.23</td>
-								<td>69.57</td>
-								<td>71.43</td>
-								<td>71.43</td>
-								<td>57.14</td>
-								<td>50</td>
-								<td>42.11</td>
-							</tr>
-
-							<tr>
-								<td>3</td>
-								<td class="best-score-text"><b>Gemini (4-shot)</b></td>
-								<td>
-									<a
-										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td class="best-score-text"><b>52.87</b></td>
-								<td>56.72</td>
-								<td>46.88</td>
-								<td>52.17</td>
-								<td>48.89</td>
-								<td>67.56</td>
-								<td>50</td>
-								<td>17.39</td>
-								<td>66.67</td>
-								<td>57.14</td>
-								<td>71.43</td>
-								<td>33.33</td>
-								<td>57.89</td>
-							</tr>
-
-							<tr>
-								<td>4</td>
-								<td><b>Gemini (0-shot)</b></td>
-								<td>
-									<a
-										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/closed_source/comprehension_gpt_gem_eval.ipynb"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td><b>51.26</b></td>
-								<td>56.72</td>
-								<td>46.88</td>
-								<td>45.65</td>
-								<td>42.22</td>
-								<td>64.86</td>
-								<td>53.85</td>
-								<td>17.39</td>
-								<td>66.67</td>
-								<td>57.14</td>
-								<td>85.71</td>
-								<td>33.33</td>
-								<td>52.63</td>
-							</tr>
-
-							<tr>
-								<td>5</td>
-								<td><b>LLaVa (0-shot)</b></td>
-								<td>
-									<a
-										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_llava_results.json"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td><b>40</b></td>
-								<td>43.28</td>
-								<td>42.19</td>
-								<td>19.57</td>
-								<td>42.22</td>
-								<td>43.24</td>
-								<td>38.46</td>
-								<td>26.09</td>
-								<td>61.90</td>
-								<td>71.43</td>
-								<td>42.86</td>
-								<td>0.00</td>
-								<td>42.11</td>
-							</tr>
-
-							<tr>
-								<td>6</td>
-								<td><b>Cog (0-shot)</b></td>
-								<td>
-									<a
-										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_cog_results.json"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td><b>38.16</b></td>
-								<td>44.03</td>
-								<td>34.38</td>
-								<td>13.04</td>
-								<td>42.22</td>
-								<td>45.95</td>
-								<td>30.77</td>
-								<td>30.43</td>
-								<td>42.86</td>
-								<td>71.43</td>
-								<td>71.43</td>
-								<td>16.67</td>
-								<td>42.11</td>
-							</tr>
-
-							<tr>
-								<td>7</td>
-								<td><b>I-BLIP (0-shot)</b></td>
-								<td>
-									<a
-										href="https://github.com/csebuetnlp/IllusionVQA/blob/main/results_and_evaluation/open_source/results/dataset1_instructblip_results.json"
-										class="ext-link"
-										style="font-size: 16px"
-										>Link</a
-									>
-								</td>
-								<td>2024-02-25</td>
-								<td><b>34.25</b></td>
-								<td>34.22</td>
-								<td>26.56</td>
-								<td>26.09</td>
-								<td>44.44</td>
-								<td>37.84</td>
-								<td>30.77</td>
-								<td>30.43</td>
-								<td>42.86</td>
-								<td>42.86</td>
-								<td>57.41</td>
-								<td>33.33</td>
-								<td>36.84</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="container has-text-centered pb-5">
-					<p>
-						The columns represent the different types of illusions in the
-						dataset.
-					</p>
-				</div>
-
-				<div class="container has-text-centered p-1">
-					<p>
-						🚨 To submit your results to the leaderboard, please send to
-						<a href="mailto:sameen2080@gmail.com">this email</a> with your
-						result json files.
-					</p>
-				</div>
-				<div class="container has-text-centered p-1">
-					<p>
-						🚨 For more submission details, please refer to
-						<a href="https://github.com/csebuetnlp/IllusionVQA">this link</a>
-					</p>
-				</div>
-			</div>
-		</section>
-		<!--/ Leaderboard -->
 
 		<!-- Result -->
 		<section id="experiments-section">
