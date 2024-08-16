@@ -26,18 +26,18 @@ body {
 }
 
 .teaser-img {
-  height: 350px;
-  width: auto;
+	height: 400px;
+	width: auto;
 }
 
 .comp-img {
-  height: 50%;
-  width: auto;
-  margin-bottom: 20px;
+	height: 50%;
+	width: auto;
+	margin-bottom: 20px;
 }
 
 .leaderboard-header {
-  margin-bottom: 70px;
+	margin-bottom: 70px;
 }
 
 .title-logo {
@@ -165,10 +165,11 @@ body {
 
 table {
 	width: 100%;
-  border-collapse: collapse;
+	border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
 	width: max-content;
 }
 
