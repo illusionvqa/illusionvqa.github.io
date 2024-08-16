@@ -30,12 +30,6 @@ body {
 	width: auto;
 }
 
-.comp-img {
-	height: 50%;
-	width: auto;
-	margin-bottom: 20px;
-}
-
 .leaderboard-header {
 	margin-bottom: 70px;
 }
@@ -179,4 +173,20 @@ thead td:hover {
 
 .best-score-text {
 	color: #c6011f;
+}
+
+.visualizer-section {
+	margin-bottom: 100px;
+}
+
+.result-img {
+	height: 380px;
+	width: auto;
+  margin: 50px;
+}
+
+.comp-img {
+  height: 480px;
+  width: auto;
+  margin-top: -50px;
 }
