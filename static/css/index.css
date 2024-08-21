@@ -182,11 +182,15 @@ thead td:hover {
 .result-img {
 	height: 380px;
 	width: auto;
-  margin: 50px;
+	margin: 50px;
 }
 
 .comp-img {
-  height: 480px;
-  width: auto;
-  margin-top: -50px;
+	height: 480px;
+	width: auto;
+	margin-top: -50px;
+}
+
+.colm {
+	color: red;
 }
